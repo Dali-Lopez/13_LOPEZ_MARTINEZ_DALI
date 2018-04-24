@@ -35,4 +35,9 @@ int main()
 	{
 		printf("%d\n", vector[i] );
 	}
+	printf("\n de Mayor a menor\n");
+	for (int i = 10; i >=0 ; i--)
+	{
+		printf("%d\n", vector[i] );
+	}
 }
