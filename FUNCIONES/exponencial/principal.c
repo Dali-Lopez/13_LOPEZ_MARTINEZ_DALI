@@ -11,12 +11,12 @@ int main()
 		scanf("%d", &base);
 	printf("Ingrese el exponente : ");
 		scanf("%d", &exponente);
-	if (exponente >= 2)
+	if (exponente >= 0)
 		{
 			resultado = exponenteF(base, exponente);
 			printf("El resultado es %.0f \n", resultado );
-		}else
-			{	
+		}else if (exponente < 0)
+			{
 				resultado = exponenteF_Negativo(base, exponente);		
 			printf("El resultado es %f \n", resultado );
 			}			
@@ -44,7 +44,8 @@ double exponenteF(double b, int expo)
 
 double exponenteF_Negativo(double b, int expo)
 {
-	float R;
+	double R;
+	float R_N;
 	if (expo == 0)
 		{
 			R = 1;
@@ -58,6 +59,6 @@ double exponenteF_Negativo(double b, int expo)
 							R *=b;
 						}
 				}
-	R = 1/R;			
+	R_N = 1/R;			
 	return R;
 }
